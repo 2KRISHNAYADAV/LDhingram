@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/components/auth/MockAuthProvider";
 import ThemeToggle from "@/components/ThemeToggle";
 import UploadModal from "@/components/UploadModal";
 import { dataManager, User, Post } from "@/lib/data";
@@ -19,7 +18,6 @@ const Profile = () => {
   const [showUploadDialog, setShowUploadDialog] = useState(false);
   const [uploadType, setUploadType] = useState<'post' | 'reel' | 'story'>('post');
   const navigate = useNavigate();
-  const { signOut } = useAuth();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const avatarInputRef = useRef<HTMLInputElement>(null);
 
@@ -130,10 +128,7 @@ const Profile = () => {
               variant="ghost" 
               size="icon" 
               className="w-8 h-8 p-0"
-              onClick={() => {
-                signOut();
-                navigate('/onboarding');
-              }}
+              onClick={() => navigate('/settings')}
             >
               <MoreHorizontal className="w-5 h-5 text-black" />
             </Button>

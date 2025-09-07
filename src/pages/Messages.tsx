@@ -16,9 +16,9 @@ const Messages = () => {
   const [chats, setChats] = useState<Chat[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
 
-  useEffect(() => {
+  useState(() => {
     setChats(dataManager.getChats());
-  }, []);
+  });
 
   const handleSendMessage = () => {
     if (newMessage.trim() && selectedChat) {

@@ -124,7 +124,7 @@ const Settings = () => {
                 <CardDescription>@johndoe • 1.2K followers</CardDescription>
               </div>
               <Button variant="outline" size="sm">
-                Edit Profile
+                About
               </Button>
             </div>
           </CardHeader>
