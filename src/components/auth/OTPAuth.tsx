@@ -7,7 +7,7 @@ import { ArrowLeft, Phone, Shield, CheckCircle, AlertCircle } from 'lucide-react
 import OTPInput from 'react-otp-input'
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
-import { useAuth } from './MockAuthProvider'
+import { useAuth } from './AuthProvider'
 import logoImage from '@/assets/new-logo.png'
 
 const OTPAuth = () => {
