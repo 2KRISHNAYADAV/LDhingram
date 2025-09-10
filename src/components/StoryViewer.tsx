@@ -7,9 +7,16 @@ import { cn } from "@/lib/utils";
 interface Story {
   id: number;
   user: {
+    id: number;
     name: string;
     username: string;
     avatar: string;
+    bio: string;
+    website?: string;
+    posts: number;
+    followers: number;
+    following: number;
+    isVerified: boolean;
   };
   media: {
     type: 'image' | 'video';

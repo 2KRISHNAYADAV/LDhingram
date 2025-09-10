@@ -83,14 +83,33 @@ const Home = () => {
     try {
       // For now, we'll use a mock user ID - in real app, get from auth
       const userId = 'mock-user-id';
-      await SupabaseService.likePost(userId, postId);
-      // Reload posts to get updated like count
-      loadPosts();
+      const numericPostId = parseInt(postId);
+      
+      // Check if post exists in local data
+      const post = posts.find(p => p.id === numericPostId);
+      if (post) {
+        // Update local state immediately for better UX
+        post.isLiked = !post.isLiked;
+        post.likes += post.isLiked ? 1 : -1;
+        setPosts([...posts]);
+        
+        // Try to sync with Supabase
+        if (post.isLiked) {
+          await SupabaseService.likePost(userId, postId);
+        } else {
+          await SupabaseService.unlikePost(userId, postId);
+        }
+      }
     } catch (error) {
       console.error('Error toggling like:', error);
-      // Fallback to local data
-      dataManager.likePost(parseInt(postId));
-      setPosts([...dataManager.getPosts()]);
+      // Revert local state on error
+      const numericPostId = parseInt(postId);
+      const post = posts.find(p => p.id === numericPostId);
+      if (post) {
+        post.isLiked = !post.isLiked;
+        post.likes += post.isLiked ? 1 : -1;
+        setPosts([...posts]);
+      }
     }
   };
 
@@ -267,7 +286,7 @@ const Home = () => {
                   variant="ghost" 
                   size="icon" 
                   className="w-8 h-8 p-0"
-                  onClick={() => toggleSave(post.id)}
+                  onClick={() => toggleLike(post.id.toString())}
                 >
                   <Bookmark 
                     className={cn(

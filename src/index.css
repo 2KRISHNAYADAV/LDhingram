@@ -469,7 +469,8 @@
 
 /* Phone input styling */
 .phone-input .PhoneInputInput {
-  @apply h-14 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-base transition-smooth focus:border-pink-500 focus:outline-none;
+  @apply h-14 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-base focus:border-pink-500 focus:outline-none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .phone-input .PhoneInputCountrySelect {

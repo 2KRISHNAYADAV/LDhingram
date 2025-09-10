@@ -7,7 +7,8 @@ const BottomNavigation = () => {
   const navigate = useNavigate();
 
   // Don't show navigation on auth pages
-  if (location.pathname === '/login' || location.pathname === '/signup') {
+  const authPaths = ['/login', '/signup', '/welcome', '/forgot-password', '/profile-setup', '/otp-auth'];
+  if (authPaths.includes(location.pathname)) {
     return null;
   }
 

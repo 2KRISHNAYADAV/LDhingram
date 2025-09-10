@@ -33,25 +33,34 @@ export class SupabaseService {
 
   // Post operations
   static async getPosts(limit = 20, offset = 0): Promise<Post[]> {
-    const { data, error } = await supabase
-      .from('posts')
-      .select(`
-        *,
-        profiles (
-          id,
-          username,
-          full_name,
-          avatar_url
-        )
-      `)
-      .order('created_at', { ascending: false })
-      .range(offset, offset + limit - 1)
+    try {
+      const { data, error } = await supabase
+        .from('posts')
+        .select(`
+          *,
+          profiles (
+            id,
+            username,
+            full_name,
+            avatar_url
+          )
+        `)
+        .order('created_at', { ascending: false })
+        .range(offset, offset + limit - 1)
     
-    if (error) {
-      console.error('Error fetching posts:', error)
+      if (error) {
+        console.error('Error unliking post:', error)
+        throw error
+      }
+      return true
+    } catch (error) {
+      console.error('Unlike operation failed:', error)
+        throw error
+    }
+    } catch (error) {
+      console.error('Posts fetch error:', error)
       return []
     }
-    return data || []
   }
 
   static async createPost(post: Omit<Post, 'id' | 'created_at' | 'updated_at'>): Promise<Post | null> {
@@ -89,6 +98,7 @@ export class SupabaseService {
   }
 
   static async unlikePost(userId: string, postId: string): Promise<boolean> {
+    try {
     const { error } = await supabase
       .from('likes')
       .delete()

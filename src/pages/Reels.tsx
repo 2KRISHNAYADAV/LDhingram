@@ -38,7 +38,18 @@ const Reels = () => {
   const reels = [
     {
       id: 1,
-      user: { name: "Alex Rivera", username: "@alexr", avatar: null },
+      user: { 
+        id: 1,
+        name: "Alex Rivera", 
+        username: "@alexr", 
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        bio: "Adventure seeker",
+        website: "",
+        posts: 45,
+        followers: 1200,
+        following: 300,
+        isVerified: false
+      },
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop",
       caption: "Mountain vibes 🏔️ #nature #adventure",
@@ -49,7 +60,18 @@ const Reels = () => {
     },
     {
       id: 2,
-      user: { name: "Maya Patel", username: "@mayap", avatar: null },
+      user: { 
+        id: 2,
+        name: "Maya Patel", 
+        username: "@mayap", 
+        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b976?w=150&h=150&fit=crop&crop=face",
+        bio: "Dance enthusiast",
+        website: "",
+        posts: 67,
+        followers: 2100,
+        following: 450,
+        isVerified: true
+      },
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       thumbnail: "https://images.unsplash.com/photo-1494790108755-2616c5e5e4a8?w=400&h=600&fit=crop",
       caption: "Dance like nobody's watching 💃 #dance #viral",
@@ -60,7 +82,18 @@ const Reels = () => {
     },
     {
       id: 3,
-      user: { name: "James Wilson", username: "@jamesw", avatar: null },
+      user: { 
+        id: 3,
+        name: "James Wilson", 
+        username: "@jamesw", 
+        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+        bio: "Chef & food lover",
+        website: "",
+        posts: 89,
+        followers: 890,
+        following: 234,
+        isVerified: false
+      },
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
       caption: "Cooking hack you need to try! 🍳 #cooking #lifehack",
@@ -71,7 +104,18 @@ const Reels = () => {
     },
     {
       id: 4,
-      user: { name: "Sophie Chen", username: "@sophiec", avatar: null },
+      user: { 
+        id: 4,
+        name: "Sophie Chen", 
+        username: "@sophiec", 
+        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+        bio: "Travel blogger",
+        website: "sophiechen.com",
+        posts: 156,
+        followers: 3400,
+        following: 567,
+        isVerified: true
+      },
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
       thumbnail: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=600&fit=crop",
       caption: "Travel goals achieved ✈️ #travel #wanderlust #explore",
@@ -82,7 +126,18 @@ const Reels = () => {
     },
     {
       id: 5,
-      user: { name: "Marcus Johnson", username: "@marcusj", avatar: null },
+      user: { 
+        id: 5,
+        name: "Marcus Johnson", 
+        username: "@marcusj", 
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+        bio: "Fitness coach",
+        website: "",
+        posts: 234,
+        followers: 1800,
+        following: 123,
+        isVerified: false
+      },
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
       thumbnail: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=600&fit=crop",
       caption: "Fitness motivation Monday 💪 #fitness #motivation #workout",
@@ -93,7 +148,18 @@ const Reels = () => {
     },
     {
       id: 6,
-      user: { name: "Emma Rodriguez", username: "@emmar", avatar: null },
+      user: { 
+        id: 6,
+        name: "Emma Rodriguez", 
+        username: "@emmar", 
+        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+        bio: "Artist & creator",
+        website: "emmaart.com",
+        posts: 78,
+        followers: 2500,
+        following: 345,
+        isVerified: true
+      },
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
       thumbnail: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=600&fit=crop",
       caption: "Art therapy session 🎨 #art #creative #painting",
@@ -104,7 +170,18 @@ const Reels = () => {
     },
     {
       id: 7,
-      user: { name: "David Kim", username: "@davidk", avatar: null },
+      user: { 
+        id: 7,
+        name: "David Kim", 
+        username: "@davidk", 
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        bio: "Software developer",
+        website: "davidkim.dev",
+        posts: 45,
+        followers: 1600,
+        following: 200,
+        isVerified: false
+      },
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
       thumbnail: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=600&fit=crop",
       caption: "Late night coding session 👨‍💻 #programming #developer #tech",
@@ -115,7 +192,18 @@ const Reels = () => {
     },
     {
       id: 8,
-      user: { name: "Aria Thompson", username: "@ariat", avatar: null },
+      user: { 
+        id: 8,
+        name: "Aria Thompson", 
+        username: "@ariat", 
+        avatar: "https://images.unsplash.com/photo-1494790108755-2616c5e5e4a8?w=150&h=150&fit=crop&crop=face",
+        bio: "Food enthusiast",
+        website: "",
+        posts: 123,
+        followers: 3100,
+        following: 456,
+        isVerified: true
+      },
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
       thumbnail: "https://images.unsplash.com/photo-1494790108755-2616c5e5e4a8?w=400&h=600&fit=crop",
       caption: "Sunday brunch vibes 🥐 #food #brunch #weekend",
@@ -186,7 +274,7 @@ const Reels = () => {
         {/* Profile */}
         <div className="flex flex-col items-center">
           <Avatar className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-white">
-            <AvatarImage src={currentReelData.user.avatar || currentReelData.thumbnail} />
+            <AvatarImage src={currentReelData.user.avatar} />
             <AvatarFallback className="bg-secondary text-secondary-foreground text-xs sm:text-sm">
               {currentReelData.user.name.split(' ').map(n => n[0]).join('')}
             </AvatarFallback>

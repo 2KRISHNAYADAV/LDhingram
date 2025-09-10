@@ -12,7 +12,11 @@ const Notifications = () => {
     {
       id: 1,
       type: 'like',
-      user: { name: 'Sarah Chen', username: '@sarahc', avatar: null },
+      user: { 
+        name: 'Sarah Chen', 
+        username: '@sarahc', 
+        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b976?w=150&h=150&fit=crop&crop=face'
+      },
       action: 'liked your post',
       time: '2m',
       isNew: true,
@@ -21,7 +25,11 @@ const Notifications = () => {
     {
       id: 2,
       type: 'follow',
-      user: { name: 'Mike Johnson', username: '@mikej', avatar: null },
+      user: { 
+        name: 'Mike Johnson', 
+        username: '@mikej', 
+        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+      },
       action: 'started following you',
       time: '5m',
       isNew: true,
@@ -30,7 +38,11 @@ const Notifications = () => {
     {
       id: 3,
       type: 'comment',
-      user: { name: 'Emma Wilson', username: '@emmaw', avatar: null },
+      user: { 
+        name: 'Emma Wilson', 
+        username: '@emmaw', 
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
+      },
       action: 'commented on your post: "Amazing shot! 📸"',
       time: '1h',
       isNew: true,
@@ -39,7 +51,11 @@ const Notifications = () => {
     {
       id: 4,
       type: 'mention',
-      user: { name: 'Alex Rivera', username: '@alexr', avatar: null },
+      user: { 
+        name: 'Alex Rivera', 
+        username: '@alexr', 
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+      },
       action: 'mentioned you in a comment',
       time: '2h',
       isNew: false,
@@ -48,7 +64,11 @@ const Notifications = () => {
     {
       id: 5,
       type: 'like',
-      user: { name: 'Maya Patel', username: '@mayap', avatar: null },
+      user: { 
+        name: 'Maya Patel', 
+        username: '@mayap', 
+        avatar: 'https://images.unsplash.com/photo-1494790108755-2616c5e5e4a8?w=150&h=150&fit=crop&crop=face'
+      },
       action: 'liked your reel',
       time: '3h',
       isNew: false,
@@ -57,7 +77,11 @@ const Notifications = () => {
     {
       id: 6,
       type: 'follow',
-      user: { name: 'James Wilson', username: '@jamesw', avatar: null },
+      user: { 
+        name: 'James Wilson', 
+        username: '@jamesw', 
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'
+      },
       action: 'started following you',
       time: '1d',
       isNew: false,
@@ -66,7 +90,11 @@ const Notifications = () => {
     {
       id: 7,
       type: 'comment',
-      user: { name: 'Lisa Chen', username: '@lisac', avatar: null },
+      user: { 
+        name: 'Lisa Chen', 
+        username: '@lisac', 
+        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face'
+      },
       action: 'commented on your post: "Love this! Where was this taken?"',
       time: '2d',
       isNew: false,

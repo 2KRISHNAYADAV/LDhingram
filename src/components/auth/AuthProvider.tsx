@@ -78,19 +78,30 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       
       if (data.user && !error) {
         // Create profile in database
-        const { error: profileError } = await supabase.from('profiles').insert({
-          id: data.user.id,
-          username: userData.username || email.split('@')[0],
-          full_name: userData.full_name || email.split('@')[0],
-          avatar_url: userData.avatar_url || null,
-          bio: userData.bio || null,
-          website: userData.website || null,
-          followers_count: 0,
-          following_count: 0,
-          posts_count: 0
-        })
-        
-        if (profileError) throw profileError
+        try {
+          const { error: profileError } = await supabase.from('profiles').insert({
+            id: data.user.id,
+            username: userData.username || email.split('@')[0],
+            full_name: userData.full_name || email.split('@')[0],
+            avatar_url: userData.avatar_url || null,
+            bio: userData.bio || null,
+            website: userData.website || null,
+            followers_count: 0,
+            following_count: 0,
+            posts_count: 0
+          })
+          
+          if (profileError) {
+            console.error('Profile creation error:', profileError)
+            // Don't throw error if profile already exists
+            if (!profileError.message.includes('duplicate key')) {
+              throw profileError
+            }
+          }
+        } catch (profileError) {
+          console.error('Profile creation failed:', profileError)
+          // Continue with signup even if profile creation fails
+        }
         toast.success('Account created successfully!')
       }
       

@@ -282,7 +282,7 @@ export class DataManager {
     return this.currentUser;
   }
 
-  updateUser(updates: Partial<User>): void {
+  updateUser(updates: Partial<Omit<User, 'id'>>): void {
     this.currentUser = { ...this.currentUser, ...updates };
   }
 
