@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LoadingSpinner } from "./components/ui/loading-spinner";
+import { AuthProvider } from "./components/auth/AuthProvider";
 import BottomNavigation from "./components/BottomNavigation";
 import Home from "./pages/Home";
 import Reels from "./pages/Reels";
