@@ -114,25 +114,35 @@ export class SupabaseService {
 
   // Story operations
   static async getStories(): Promise<Story[]> {
-    const { data, error } = await supabase
-      .from('stories')
-      .select(`
-        *,
-        profiles (
-          id,
-          username,
-          full_name,
-          avatar_url
-        )
-      `)
-      .gt('expires_at', new Date().toISOString())
-      .order('created_at', { ascending: false })
-    
-    if (error) {
-      console.error('Error fetching stories:', error)
+    try {
+      const { data, error } = await supabase
+        .from('stories')
+        .select(`
+          *,
+          profiles (
+            id,
+            username,
+            full_name,
+            avatar_url
+          )
+        `)
+        .gt('expires_at', new Date().toISOString())
+        .order('created_at', { ascending: false })
+      
+      if (error) {
+        // If table doesn't exist, return empty array instead of throwing error
+        if (error.code === 'PGRST205' || error.message.includes('Could not find the table')) {
+          console.warn('Stories table not found, returning empty array. Please run the database migration.')
+          return []
+        }
+        console.error('Error fetching stories:', error)
+        return []
+      }
+      return data || []
+    } catch (error) {
+      console.error('Stories fetch error:', error)
       return []
     }
-    return data || []
   }
 
   static async createStory(story: Omit<Story, 'id' | 'created_at'>): Promise<Story | null> {
