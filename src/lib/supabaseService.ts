@@ -49,14 +49,10 @@ export class SupabaseService {
         .range(offset, offset + limit - 1)
     
       if (error) {
-        console.error('Error unliking post:', error)
-        throw error
+        console.error('Error fetching posts:', error)
+        return []
       }
-      return true
-    } catch (error) {
-      console.error('Unlike operation failed:', error)
-        throw error
-    }
+      return data || []
     } catch (error) {
       console.error('Posts fetch error:', error)
       return []
