@@ -95,19 +95,19 @@ export class SupabaseService {
 
   static async unlikePost(userId: string, postId: string): Promise<boolean> {
     try {
-      const { error } = await supabase
-        .from('likes')
-        .delete()
-        .eq('user_id', userId)
-        .eq('post_id', postId)
+    const { error } = await supabase
+      .from('likes')
+      .delete()
+      .eq('user_id', userId)
+      .eq('post_id', postId)
     
-      if (error) {
-        console.error('Error unliking post:', error)
-        return false
-      }
-      return true
+    if (error) {
+      console.error('Error unliking post:', error)
+      return false
+    }
+    return true
     } catch (error) {
-      console.error('Unlike operation failed:', error)
+      console.error('Error unliking post:', error)
       return false
     }
   }
