@@ -49,6 +49,11 @@ export class SupabaseService {
         .range(offset, offset + limit - 1)
     
       if (error) {
+        // If table doesn't exist, return empty array instead of throwing error
+        if (error.code === 'PGRST205' || error.message.includes('Could not find the table')) {
+          console.warn('Posts table not found, returning empty array. Please run the database migration.')
+          return []
+        }
         console.error('Error fetching posts:', error)
         return []
       }
