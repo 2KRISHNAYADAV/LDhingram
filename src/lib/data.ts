@@ -70,6 +70,66 @@ export const mockUsers: User[] = [
     isFollowing: false
   },
   {
+    id: 4,
+    name: "Priya Sharma",
+    username: "@priyasharma",
+    avatar: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=150&h=150&fit=crop&crop=face",
+    bio: "Bollywood dancer 💃 | Mumbai | Spreading joy through dance ✨",
+    posts: 234,
+    followers: 45600,
+    following: 1200,
+    isVerified: true,
+    isFollowing: false
+  },
+  {
+    id: 5,
+    name: "Arjun Patel",
+    username: "@arjunpatel",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    bio: "Tech entrepreneur 🚀 | Bangalore | Building the future 💡",
+    posts: 189,
+    followers: 23400,
+    following: 567,
+    isVerified: true,
+    isFollowing: true
+  },
+  {
+    id: 6,
+    name: "Kavya Reddy",
+    username: "@kavyareddy",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    bio: "Food blogger 🍛 | Hyderabad | Authentic Indian recipes 👩‍🍳",
+    posts: 156,
+    followers: 18900,
+    following: 890,
+    isVerified: false,
+    isFollowing: false
+  },
+  {
+    id: 7,
+    name: "Rohit Singh",
+    username: "@rohitsingh",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    bio: "Cricket enthusiast 🏏 | Delhi | MS Dhoni fan forever 💙",
+    posts: 298,
+    followers: 67800,
+    following: 234,
+    isVerified: true,
+    isFollowing: true
+  },
+  {
+    id: 8,
+    name: "Ananya Gupta",
+    username: "@ananyagupta",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    bio: "Fashion influencer 👗 | Kolkata | Sustainable fashion advocate 🌱",
+    posts: 445,
+    followers: 89200,
+    following: 1890,
+    isVerified: true,
+    isFollowing: false
+  }
+  {
     id: 2,
     name: "Sarah Chen",
     username: "@sarahc",
