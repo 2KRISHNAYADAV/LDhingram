@@ -21,24 +21,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   }
 });
 
-// Test connection on initialization
-supabase.from('profiles').select('count', { count: 'exact', head: true })
-  .then(({ error }) => {
-    if (error) {
-      console.error('Supabase connection test failed:', error);
-      console.error('Please check:');
-      console.error('1. Supabase project is active in dashboard');
-      console.error('2. URL and API key are correct');
-      console.error('3. CORS is configured for localhost:8080');
-    } else {
-      console.log('✅ Supabase connection test successful');
-    }
-  })
-  .catch((error) => {
-    console.error('❌ Supabase connection test failed with network error:', error);
-    console.error('This indicates a network connectivity or CORS issue');
-  });
-
 // Database types
 export interface Profile {
   id: string
