@@ -1,15 +1,43 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://zwlumwlqirexpkluebfw.supabase.co'
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp3bHVtd2xxaXJleHBrbHVlYmZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxNjI3MjIsImV4cCI6MjA3MjczODcyMn0.ZWDl6oSmyf4MFN0xQi1HXrt7Ey4A7mGvbgIqrSLIBOk'
+const supabaseUrl = 'https://zwlumwlqirexpkluebfw.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp3bHVtd2xxaXJleHBrbHVlYmZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxNjI3MjIsImV4cCI6MjA3MjczODcyMn0.ZWDl6oSmyf4MFN0xQi1HXrt7Ey4A7mGvbgIqrSLIBOk';
+
+// Log configuration for debugging
+console.log('Supabase configuration:');
+console.log('URL:', supabaseUrl);
+console.log('Anon Key (first 20 chars):', supabaseAnonKey.substring(0, 20) + '...');
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: true
+  },
+  global: {
+    headers: {
+      'X-Client-Info': 'supabase-js-web'
+    }
   }
-})
+});
+
+// Test connection on initialization
+supabase.from('profiles').select('count', { count: 'exact', head: true })
+  .then(({ error }) => {
+    if (error) {
+      console.error('Supabase connection test failed:', error);
+      console.error('Please check:');
+      console.error('1. Supabase project is active in dashboard');
+      console.error('2. URL and API key are correct');
+      console.error('3. CORS is configured for localhost:8080');
+    } else {
+      console.log('✅ Supabase connection test successful');
+    }
+  })
+  .catch((error) => {
+    console.error('❌ Supabase connection test failed with network error:', error);
+    console.error('This indicates a network connectivity or CORS issue');
+  });
 
 // Database types
 export interface Profile {

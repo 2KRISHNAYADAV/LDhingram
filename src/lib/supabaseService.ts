@@ -34,6 +34,10 @@ export class SupabaseService {
   // Post operations
   static async getPosts(limit = 20, offset = 0): Promise<Post[]> {
     try {
+      // Log connection attempt for debugging
+      console.log('Attempting to fetch posts from Supabase...');
+      console.log('Supabase URL:', supabase.supabaseUrl);
+      
       const { data, error } = await supabase
         .from('posts')
         .select(`
@@ -49,17 +53,25 @@ export class SupabaseService {
         .range(offset, offset + limit - 1)
     
       if (error) {
+        console.error('Supabase query error:', error);
         // If table doesn't exist, return empty array instead of throwing error
         if (error.code === 'PGRST205' || error.message.includes('Could not find the table')) {
           console.warn('Posts table not found, returning empty array. Please run the database migration.')
           return []
         }
-        console.error('Error fetching posts:', error)
+        console.error('Error fetching posts:', error);
         return []
       }
+      
+      console.log('Successfully fetched posts:', data?.length || 0);
       return data || []
     } catch (error) {
-      console.error('Posts fetch error:', error)
+      console.error('Posts fetch error (network/connection issue):', error);
+      console.error('This usually indicates a problem with:');
+      console.error('1. Supabase project status or configuration');
+      console.error('2. Network connectivity');
+      console.error('3. CORS settings in Supabase dashboard');
+      console.error('4. Invalid Supabase URL or API keys');
       return []
     }
   }
@@ -120,6 +132,8 @@ export class SupabaseService {
   // Story operations
   static async getStories(): Promise<Story[]> {
     try {
+      console.log('Attempting to fetch stories from Supabase...');
+      
       const { data, error } = await supabase
         .from('stories')
         .select(`
@@ -135,17 +149,20 @@ export class SupabaseService {
         .order('created_at', { ascending: false })
       
       if (error) {
+        console.error('Supabase stories query error:', error);
         // If table doesn't exist, return empty array instead of throwing error
         if (error.code === 'PGRST205' || error.message.includes('Could not find the table')) {
           console.warn('Stories table not found, returning empty array. Please run the database migration.')
           return []
         }
-        console.error('Error fetching stories:', error)
+        console.error('Error fetching stories:', error);
         return []
       }
+      
+      console.log('Successfully fetched stories:', data?.length || 0);
       return data || []
     } catch (error) {
-      console.error('Stories fetch error:', error)
+      console.error('Stories fetch error (network/connection issue):', error);
       return []
     }
   }
