@@ -1,4 +1,4 @@
-<h1 align="center">🌐 LDgam – Modern Social Media Platform</h1>
+<h1 align="center">🌐 LDhingarm – Modern Social Media Platform</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
@@ -101,7 +101,7 @@ LDgam is a modern, clean, and Instagram-inspired social media platform built wit
 
 ## 📁 **Project Structure**
 
-LDgram/
+LDhingram/
 │── assets/
 │ ├── images/
 │ ├── icons/
