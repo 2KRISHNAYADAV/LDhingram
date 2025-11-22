@@ -20,7 +20,36 @@ LDgam is a modern, clean, and Instagram-inspired social media platform built wit
 - High-quality image display  
 - Modern UI with spacing & alignment  
 
-<img src="(your-image-link-here)" width="900" />
+## 🖼️ Screenshots (Grid Layout)
+
+<div align="center">
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/dceee8e2-e646-4f22-97f2-a4ed18868065" width="100%"></td>
+    <td><img src="https://github.com/user-attachments/assets/328026cf-48e7-41f5-8319-5b6c111dc60a" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/4dcf8386-cfcc-4bec-a274-0e3ca5976653" width="100%"></td>
+    <td><img src="https://github.com/user-attachments/assets/37012ff4-0a07-4012-bac9-0162d878bee8" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/741853a6-5a89-45ce-8bdc-ea9a6a9fe1cc" width="100%"></td>
+    <td><img src="https://github.com/user-attachments/assets/6ecdb2cd-ac6e-46d1-909b-d422ee02289b" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d8a4b4ef-81f3-4998-b49e-7683b3efa4fd" width="100%"></td>
+    <td><img src="https://github.com/user-attachments/assets/f0d801ef-26a3-447e-9b5c-a77af59c9648" width="100%"></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="https://github.com/user-attachments/assets/24432355-3942-466f-b8ae-3735e32a030c" width="100%">
+    </td>
+  </tr>
+</table>
+
+</div>
+
 
 ---
 
@@ -29,7 +58,6 @@ LDgam is a modern, clean, and Instagram-inspired social media platform built wit
 - Grid-style layout similar to Instagram’s explore  
 - Smooth hover effects  
 
-<img src="(your-image-link-here)" width="900" />
 
 ---
 
@@ -38,7 +66,6 @@ LDgam is a modern, clean, and Instagram-inspired social media platform built wit
 - Minimal UI  
 - Highlight posts in a grid view  
 
-<img src="(your-image-link-here)" width="300" />
 
 ---
 
@@ -47,7 +74,7 @@ LDgam is a modern, clean, and Instagram-inspired social media platform built wit
 - Add captions  
 - Preview before posting  
 
-<img src="(your-image-link-here)" width="300" />
+
 
 ---
 
@@ -56,7 +83,7 @@ LDgam is a modern, clean, and Instagram-inspired social media platform built wit
 - Clean input UI  
 - Mobile friendly  
 
-<img src="(your-image-link-here)" width="300" />
+
 
 ---
 
@@ -86,4 +113,7 @@ LDgram/
 │── upload.html
 │── login.html
 │── README.md
+
+
+
 
