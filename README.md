@@ -100,7 +100,6 @@ LDgam is a modern, clean, and Instagram-inspired social media platform built wit
 ---
 
 ## 📁 **Project Structure**
-
 LDhingram/
 │── assets/
 │ ├── images/
