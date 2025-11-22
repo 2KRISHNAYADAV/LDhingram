@@ -1,10 +1,89 @@
+<h1 align="center">🌐 LDgam – Modern Social Media Platform</h1>
 
-<img width="1877" height="906" alt="Screenshot 2025-11-22 232039" src="https://github.com/user-attachments/assets/dceee8e2-e646-4f22-97f2-a4ed18868065" />
-<img width="1891" height="871" alt="Screenshot 2025-11-22 232111" src="https://github.com/user-attachments/assets/328026cf-48e7-41f5-8319-5b6c111dc60a" />
-<img width="465" height="847" alt="Screenshot 2025-11-22 232329" src="https://github.com/user-attachments/assets/4dcf8386-cfcc-4bec-a274-0e3ca5976653" />
-<img width="1880" height="886" alt="Screenshot 2025-11-22 232205" src="https://github.com/user-attachments/assets/37012ff4-0a07-4012-bac9-0162d878bee8" />
-<img width="1871" height="895" alt="Screenshot 2025-11-22 232137" src="https://github.com/user-attachments/assets/741853a6-5a89-45ce-8bdc-ea9a6a9fe1cc" />
-<img width="1147" height="750" alt="Screenshot 2025-11-22 232310" src="https://github.com/user-attachments/assets/6ecdb2cd-ac6e-46d1-909b-d422ee02289b" />
-<img width="451" height="842" alt="Screenshot 2025-11-22 232405" src="https://github.com/user-attachments/assets/d8a4b4ef-81f3-4998-b49e-7683b3efa4fd" />
-<img width="459" height="841" alt="Screenshot 2025-11-22 232347" src="https://github.com/user-attachments/assets/f0d801ef-26a3-447e-9b5c-a77af59c9648" />
-<img width="1884" height="872" alt="Screenshot 2025-11-22 232250" src="https://github.com/user-attachments/assets/24432355-3942-466f-b8ae-3735e32a030c" />
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Version-1.0-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Built%20By-Krishna%20Yadav-orange?style=for-the-badge" />
+</p>
+
+<p align="center">
+LDgam is a modern, clean, and Instagram-inspired social media platform built with a focus on creativity, simplicity, and smooth user experience.
+</p>
+
+---
+
+## ✨ Features
+
+### 🔹 **Home Feed**
+- Clean  layout  
+- Smooth card design  
+- High-quality image display  
+- Modern UI with spacing & alignment  
+
+<img src="(your-image-link-here)" width="900" />
+
+---
+
+### 🔹 **Explore / Discover Page**
+- Discover trending posts  
+- Grid-style layout similar to Instagram’s explore  
+- Smooth hover effects  
+
+<img src="(your-image-link-here)" width="900" />
+
+---
+
+### 🔹 **Profile Page**
+- Display profile photo, posts, and bio  
+- Minimal UI  
+- Highlight posts in a grid view  
+
+<img src="(your-image-link-here)" width="300" />
+
+---
+
+### 🔹 **Post Upload System**
+- Upload images  
+- Add captions  
+- Preview before posting  
+
+<img src="(your-image-link-here)" width="300" />
+
+---
+
+### 🔹 **Authentication**
+- Login & Signup pages  
+- Clean input UI  
+- Mobile friendly  
+
+<img src="(your-image-link-here)" width="300" />
+
+---
+
+## 🖥️ **Tech Stack**
+
+| Component | Technology |
+|----------|------------|
+| TOOLS | HTML, CSS, JavaScript, DBMS, PostgreSQL.. |
+| Styling | Styled Components / Custom CSS |
+| Icons | Font Awesome / Custom icons |
+| Deployment | GitHub Pages / Any Hosting |
+| Design Inspiration | Instagram |
+
+---
+
+## 📁 **Project Structure**
+
+LDgram/
+│── assets/
+│ ├── images/
+│ ├── icons/
+│── css/
+│── js/
+│── index.html
+│── explore.html
+│── profile.html
+│── upload.html
+│── login.html
+│── README.md
+
